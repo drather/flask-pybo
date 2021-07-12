@@ -1,4 +1,4 @@
-from flask import Blueprint, url_for
+from flask import Blueprint, url_for, current_app
 from pybo.models import Question
 from werkzeug.utils import redirect
 
@@ -13,5 +13,5 @@ def hello_pybo():
 
 @bp.route('/')
 def index():
-    3 / 0 # 강제로 오류 발생
+    current_app.logger.info("INFO 레벨로 출력")
     return redirect(url_for('question._list'))
