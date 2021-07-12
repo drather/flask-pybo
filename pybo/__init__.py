@@ -21,9 +21,6 @@ def page_not_found(e):
 
 def create_app():
     app = Flask(__name__)
-    # 경석이
-    import os
-    print(os.environ['APP_CONFIG_FILE'])
 
     app.config.from_envvar('APP_CONFIG_FILE')
 
