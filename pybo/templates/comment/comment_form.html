@@ -1,7 +1,10 @@
+<!-- 댓글 입력 화면 -->
+
 {% extends 'base.html' %}
 {% block content %}
 <div class="container my-3">
     <h5 class="border-bottom pb-2">댓글등록하기</h5>
+    <!-- 댓글 입력 form 시작 -->
     <form method="post" class="post-form my-3">
         {{ form.csrf_token }}
         {% include "form_errors.html" %}
@@ -12,5 +15,7 @@
         </div>
         <button type="submit" class="btn btn-primary">저장하기</button>
     </form>
+    <!-- 댓글 입력 form 끝 -->
+
 </div>
 {% endblock %}

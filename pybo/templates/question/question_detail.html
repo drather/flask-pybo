@@ -1,3 +1,5 @@
+<!-- 질문 상세 조회 화면 -->
+
 {% extends 'base.html' %}
 {% block content %}
 <div class="container my-3">
@@ -8,12 +10,16 @@
     {% endfor %}
     <h2 class="border-bottom py-2">{{ question.subject }}</h2>
     <div class="row my-3">
-        <div class="col-1"> <!-- 추천영역 -->
+        <!-- 추천 영역 시작 -->
+        <div class="col-1">
             <div class="bg-light text-center p-3 border font-weight-bolder mb-1">{{ question.voter|length }}</div>
             <a href="#" data-uri="{{ url_for('vote.question', question_id=question.id) }}"
                class="recommend btn btn-sm btn-secondary btn-block my-1">추천</a>
         </div>
-        <div class="col-11"> <!-- 질문영역 -->
+        <!-- 추천 영역 끝 -->
+
+        <!-- 질문영역 시작 -->
+        <div class="col-11">
             <div class="card">
                 <div class="card-body">
                     <div class="card-text">{{ question.content|markdown }}</div>
@@ -29,6 +35,7 @@
                             <div>{{ question.create_date|datetime }}</div>
                         </div>
                     </div>
+                    <!-- 로그인한 유저가 작성자라면 수정, 삭제 가능 시작-->
                     {% if g.user == question.user %}
                     <div class="my-3">
                         <a href="{{ url_for('question.modify', question_id=question.id) }}"
@@ -37,6 +44,8 @@
                            data-uri="{{ url_for('question.delete', question_id=question.id) }}">삭제</a>
                     </div>
                     {% endif %}
+                    <!-- 로그인한 유저가 작성자라면 수정, 삭제 가능 끝-->
+
                     <!-- 질문 댓글 Start -->
                     {% if question.comment_set|length > 0 %}
                     <div class="mt-3">
