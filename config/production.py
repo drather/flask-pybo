@@ -4,11 +4,19 @@
 from config.default import *
 from logging.config import dictConfig
 
-# 운영 환경에서 사용할 데이터 베이스 주소
+# 운영 환경(AWS)에서 사용할 데이터 베이스 주소
+# SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://{user}:{pw}@{uri}/{db}'.format(
+#     user='dbmasteruser',
+#     pw='Y2KqfJ{5m7r1uf%Ng7P*:O{s$-zab~2R',
+#     uri='ls-45f3d185c617157c0f19e01e0ad95a86a721ca12.cizc7qh0aggx.ap-northeast-2.rds.amazonaws.com',
+#     db='flask_pybo'
+# )
+
+# 운영 환경(AWS)에서 사용할 데이터 베이스 주소
 SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://{user}:{pw}@{uri}/{db}'.format(
     user='dbmasteruser',
-    pw='Y2KqfJ{5m7r1uf%Ng7P*:O{s$-zab~2R',
-    uri='ls-45f3d185c617157c0f19e01e0ad95a86a721ca12.cizc7qh0aggx.ap-northeast-2.rds.amazonaws.com',
+    pw='Febpost82@',
+    uri='localhost:5432',
     db='flask_pybo'
 )
 
