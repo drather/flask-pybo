@@ -12,10 +12,10 @@ from logging.config import dictConfig
 #     db='flask_pybo'
 # )
 
-# 운영 환경(AWS)에서 사용할 데이터 베이스 주소
+# 운영 환경(daehyun)에서 사용할 데이터 베이스 주소
 SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2:///{user}:{pw}@{uri}/{db}'.format(
     user='dbmasteruser',
-    pw='Febpost82@',
+    pw='qwer!234',
     uri='localhost:5432',
     db='flask_pybo'
 )
