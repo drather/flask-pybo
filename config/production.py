@@ -13,7 +13,7 @@ from logging.config import dictConfig
 # )
 
 # 운영 환경(daehyun)에서 사용할 데이터 베이스 주소
-SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2:///{user}:{pw}@{uri}/{db}'.format(
+SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://{user}:{pw}@{uri}/{db}'.format(
     user='dbmasteruser',
     pw='qwer!234',
     uri='localhost:5432',
