@@ -201,3 +201,4 @@ def delete_answer(comment_id):
 
     # 질문 상세 화면으로 이동
     return redirect(url_for('question.detail', question_id=question_id))
+
