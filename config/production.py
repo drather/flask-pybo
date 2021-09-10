@@ -16,7 +16,7 @@ from logging.config import dictConfig
 SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://{user}:{pw}@{uri}/{db}'.format(
     user='dbmasteruser',
     pw='qwer!234',
-    uri='localhost:25432',
+    uri='localhost:5432',
     db='flask_pybo'
 )
 
